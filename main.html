@@ -1,118 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Form</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f5f7fa;
-        }
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        .input-group {
-            margin-bottom: 1.5rem;
-        }
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #333;
-        }
-        input[type="text"], 
-        input[type="file"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <meta name="description" content="Interactive AI story game — upload any story and play as your favourite character with AI-generated scenes.">
+    <title>Story Game</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="card">
-    <form id="uploadForm">
-        <div class="input-group">
-            <label for="docName">Document Title</label>
-            <input type="text" id="docName" placeholder="Enter a name..." autocomplete="off">
+    <!-- ═══════════════════════════════════════════════════════
+    UPLOAD SCREEN
+    ═══════════════════════════════════════════════════════ -->
+    <div id="upload-screen">
+        <div class="container">
+            <div class="card-header">
+                <h1>Story Game</h1>
+                <p class="card-subtitle">Create your world or continue your journey</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="create" onclick="switchTab('create')">Create</button>
+                <button class="tab-btn" data-tab="library" onclick="switchTab('library')">Library</button>
+                <button class="tab-btn" data-tab="endings" onclick="switchTab('endings')">Ending</button>
+            </div>
+
+            <!-- Create Tab -->
+            <div id="create-tab" class="tab-content">
+                <div class="form-group">
+                    <label class="input-label" for="story-text">DESCRIBE YOUR STORY</label>
+                    <textarea id="story-text" placeholder="Write your story idea here..."></textarea>
+                </div>
+
+                <div class="divider">
+                    <span></span>
+                    <span class="divider-text">OR UPLOAD A PDF</span>
+                    <span></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="input-label">UPLOAD PDF</label>
+                    <div class="upload-area" onclick="document.getElementById('pdf-file').click()">
+                        <div class="upload-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8c8c8c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                        </div>
+                        <p class="upload-text"><span id="file-name">Click to choose a file</span></p>
+                        <p class="upload-hint">or drag and drop</p>
+                    </div>
+                    <input type="file" id="pdf-file" accept=".pdf">
+                </div>
+
+                <button type="button" id="begin-btn" onclick="beginAdventure()">Create Story</button>
+            </div>
+
+            <!-- Library Tab -->
+            <div id="library-tab" class="tab-content" style="display:none;">
+                <div id="library-saves-list"></div>
+            </div>
+
+            <!-- Endings Tab -->
+            <div id="endings-tab" class="tab-content" style="display:none;">
+                <div id="ending-gallery" class="endings-gallery"></div>
+            </div>
+
+            <div class="card-footer">
+                <span class="footer-dot">&#9679;</span>
+                <span class="footer-text">AI-powered interactive storytelling</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+    CHARACTER SCREEN
+    ═══════════════════════════════════════════════════════ -->
+    <div id="character-screen" style="display:none;">
+        <div class="container">
+            <div class="card-header">
+                <h1>Choose Your Character</h1>
+                <p class="card-subtitle">Select who you want to play as</p>
+            </div>
+
+            <!-- Add New / Selected Character Area -->
+            <div id="char-select-area" class="char-select-area" onclick="openCharModal()">
+                <div class="char-add-circle">
+                    <span class="char-add-icon">+</span>
+                </div>
+                <span class="char-add-text">Add New</span>
+            </div>
+
+            <div id="char-selected-area" class="char-selected-area" style="display:none;">
+                <div class="char-selected-circle" id="char-selected-circle">
+                    <span class="char-selected-initials" id="char-selected-initials"></span>
+                </div>
+                <span class="char-selected-name" id="char-selected-name"></span>
+                <button type="button" class="char-change-btn" onclick="openCharModal()">Change</button>
+            </div>
+
+            <!-- Info Section -->
+            <div id="char-info-section" class="char-info-section" style="display:none;">
+                <div class="divider">
+                    <span></span>
+                    <span class="divider-text">SELECTED CHARACTER</span>
+                    <span></span>
+                </div>
+                <div class="char-info-grid">
+                    <div class="char-info-item">
+                        <span class="char-info-label">Description</span>
+                        <span class="char-info-value" id="info-description"></span>
+                    </div>
+                    <div class="char-info-item">
+                        <span class="char-info-label">Skills</span>
+                        <span class="char-info-value" id="info-skills"></span>
+                    </div>
+                    <div class="char-info-item">
+                        <span class="char-info-label">Weaknesses</span>
+                        <span class="char-info-value" id="info-weaknesses"></span>
+                    </div>
+                    <div class="char-info-item">
+                        <span class="char-info-label">Side</span>
+                        <span class="char-info-value" id="info-side"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="difficulty-section">
+                <label class="input-label">SELECT DIFFICULTY</label>
+                <div class="difficulty-segmented">
+                    <button type="button" class="diff-btn active" data-diff="easy" onclick="setDifficulty('easy', this)">Easy</button>
+                    <button type="button" class="diff-btn" data-diff="normal" onclick="setDifficulty('normal', this)">Normal</button>
+                    <button type="button" class="diff-btn" data-diff="hard" onclick="setDifficulty('hard', this)">Hard</button>
+                </div>
+            </div>
+
+            <button type="button" id="confirm-char-btn" onclick="confirmCharacter()">Play</button>
+            <button type="button" class="btn-secondary" onclick="goBack()">Back</button>
         </div>
 
-        <div class="input-group">
-            <label for="pdfFile">Select PDF</label>
-            <input type="file" id="pdfFile" accept=".pdf">
+        <!-- Character Selection Modal -->
+        <div id="char-modal" class="char-modal" style="display:none;">
+            <div class="char-modal-content">
+                <div class="char-modal-header">
+                    <span>Choose Your Hero</span>
+                    <button type="button" onclick="closeCharModal()">&#10005;</button>
+                </div>
+                <div id="char-grid" class="char-grid"></div>
+            </div>
+        </div>
+        <div id="char-modal-overlay" class="char-modal-overlay" onclick="closeCharModal()" style="display:none;"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+    GAME SCREEN
+    ═══════════════════════════════════════════════════════ -->
+    <div id="game-screen" style="display:none;">
+
+        <!-- Top bar -->
+        <div class="game-topbar">
+            <div class="game-topbar-left">
+                <span class="tb-title">Heir of Slytherin</span>
+                <div class="tb-tabs">
+                    <button type="button" class="tb-tab active" onclick="toggleJournal()">Journal</button>
+                    <button type="button" class="tb-tab" onclick="toggleInventory()">Inventory</button>
+                    <button type="button" class="tb-tab" onclick="toggleRelMap()">Relations</button>
+                </div>
+            </div>
+            <div class="game-topbar-right">
+                <button type="button" class="tb-save" id="tb-save-btn" onclick="saveGame()">Save</button>
+                <button type="button" class="tb-newgame" onclick="newGame()">New Game</button>
+            </div>
         </div>
 
-        <button type="submit">Upload Data</button>
-    </form>
-</div>
+        <!-- Journal Drawer -->
+        <div id="journal-drawer" class="journal-drawer" style="display:none;">
+            <div class="journal-header">
+                <span>&#128214; Adventure Journal</span>
+                <button type="button" class="journal-close" onclick="toggleJournal()">&#10005;</button>
+            </div>
+            <div id="journal-entries" class="journal-entries"></div>
+        </div>
+        <div id="journal-overlay" class="journal-overlay" onclick="toggleJournal()" style="display:none;"></div>
 
-<script>
-document.getElementById('docName').addEventListener('input', function() {
-    const pdfInput = document.getElementById('pdfFile');
-    pdfInput.disabled = !!this.value;
-    if (!this.value) pdfInput.value = '';
-});
+        <!-- Inventory Drawer -->
+        <div id="inventory-drawer" class="inventory-drawer" style="display:none;">
+            <div class="inventory-header">
+                <span>&#127918; Inventory</span>
+                <button type="button" class="inventory-close" onclick="toggleInventory()">&#10005;</button>
+            </div>
+            <div id="inventory-items-list" class="inventory-items-list"></div>
+        </div>
+        <div id="inventory-overlay" class="inventory-overlay" onclick="toggleInventory()" style="display:none;"></div>
 
-document.getElementById('pdfFile').addEventListener('change', function() {
-    const textInput = document.getElementById('docName');
-    textInput.disabled = !!this.files[0];
-    if (!this.files[0]) textInput.value = '';
-});
+        <!-- Relationship Modal -->
+        <div id="rel-modal" class="rel-modal" style="display:none;">
+            <div class="rel-modal-inner">
+                <div class="rel-modal-header">
+                    <span>&#127759; Character Relationships</span>
+                    <button type="button" onclick="toggleRelMap()">&#10005;</button>
+                </div>
+                <div id="rel-map-container" class="rel-map-container"></div>
+            </div>
+        </div>
+        <div id="rel-overlay" class="rel-overlay" onclick="toggleRelMap()" style="display:none;"></div>
 
-document.getElementById('uploadForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
+        <!-- Ending Overlay -->
+        <div id="ending-overlay" class="ending-overlay" style="display:none;">
+            <div class="ending-card">
+                <div class="ending-type-badge" id="ending-type-badge"></div>
+                <h2 id="ending-title" class="ending-title"></h2>
+                <p id="ending-summary-text" class="ending-summary"></p>
+                <div class="ending-stats">
+                    <span id="ending-align-stat"></span>
+                    <span id="ending-turn-stat"></span>
+                    <span id="ending-new-badge" style="display:none;">&#128195; New Ending!</span>
+                </div>
+                <div class="ending-buttons">
+                    <button type="button" onclick="restartSameStory()">Try Different Choices</button>
+                    <button type="button" class="btn-secondary" onclick="newGame()">New Story</button>
+                </div>
+            </div>
+        </div>
 
-    const title = document.getElementById('docName').value;
-    const file = document.getElementById('pdfFile').files[0];
+        <!-- Main game area -->
+        <div class="game-main">
 
-    if (!title && !file) {
-        alert("Please fill in at least one field");
-        return;
-    }
+            <!-- Character Info Bar -->
+            <div class="char-info-bar" id="char-info-bar">
+                <div class="char-info-bar-left">
+                    <span class="char-info-bar-label">Character</span>
+                    <span class="char-info-bar-name" id="playing-as"></span>
+                </div>
+                <div class="char-info-bar-center">
+                    <span class="char-info-bar-turn" id="turn-badge">Turn 1</span>
+                </div>
+                <div class="char-info-bar-right">
+                    <span class="char-info-bar-align-text" id="align-label-text">Neutral</span>
+                    <div class="char-info-bar-track">
+                        <div class="char-info-bar-fill" id="alignment-fill"></div>
+                        <div class="char-info-bar-indicator" id="alignment-indicator"></div>
+                    </div>
+                </div>
+            </div>
 
-    const formData = new FormData(); 
+            <div class="scene-description" id="scene-description"></div>
 
-    if (title) formData.append("title", title);
-    if (file) formData.append("file", file);
+            <div class="scene-viewer">
+                <button type="button" class="nav-arrow nav-arrow-left" id="btn-prev" onclick="prevScene()" title="Previous scene">&#9664;</button>
+                <div id="scene-frame" class="scene-frame">
+                    <div id="scene-skeleton" class="skeleton-loader"></div>
+                    <span id="generating-label" class="generating-label">GENERATING SCENE...</span>
+                </div>
+                <button type="button" class="nav-arrow nav-arrow-right" id="btn-next" onclick="nextScene()" title="Next scene">&#9654;</button>
+            </div>
 
-    const response = await fetch("http://localhost:8000/", {
-        method: "POST",
-        body: formData
-    });
+            <div class="scene-divider"></div>
 
-    const data = await response.json();
-    console.log(data);
-    document.getElementById('uploadForm').reset();
-    document.getElementById('docName').disabled = false;
-    document.getElementById('pdfFile').disabled = false;
-});
-</script>
+            <div id="choices-panel">
+                <div id="choices-grid"></div>
+                <div class="custom-input-row">
+                    <input type="text" id="custom-input" placeholder="Type your own action...">
+                    <button type="button" onclick="sendCustomAction()">Act</button>
+                </div>
+            </div>
 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,22 @@
+{
+  "Harry Potter": {
+    "file": "Harry_Potter.png",
+    "prompt": "A cinematic movie still of Harry Potter. boy of about 11, messy black hair, bright green eyes, round wire-framed glasses, lightning bolt scar on forehead, thin, head and upper chest portrait, front-facing, sharp focus on face, studio lighting, portrait photography, photorealistic, detailed face."
+  },
+  "Lord Voldemort": {
+    "file": "Lord_Voldemort.png",
+    "prompt": "A cinematic movie still of Lord Voldemort. pale skin, red eyes, snake-like face, dark robes, head and upper chest portrait, front-facing, sharp focus on face, studio lighting, portrait photography, photorealistic, detailed face."
+  },
+  "Ron Weasley": {
+    "file": "Ron_Weasley.png",
+    "prompt": "A cinematic movie still of Ron Weasley. red hair, freckles, tall and lanky, head and upper chest portrait, front-facing, sharp focus on face, studio lighting, portrait photography, photorealistic, detailed face."
+  },
+  "Hermione Granger": {
+    "file": "Hermione_Granger.png",
+    "prompt": "A cinematic movie still of Hermione Granger. bushy brown hair, bright brown eyes, neat and tidy, head and upper chest portrait, front-facing, sharp focus on face, studio lighting, portrait photography, photorealistic, detailed face."
+  },
+  "Albus Dumbledore": {
+    "file": "Albus_Dumbledore.png",
+    "prompt": "A cinematic movie still of Albus Dumbledore. long white hair, half-moon glasses, long white beard, tall and slender, head and upper chest portrait, front-facing, sharp focus on face, studio lighting, portrait photography, photorealistic, detailed face."
+  }
+}

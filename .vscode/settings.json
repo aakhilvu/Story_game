@@ -1,0 +1,15 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
+    "python.analysis.extraPaths": ["${workspaceFolder}/venv/Lib/site-packages"],
+    "liveServer.settings.ignoreFiles": [
+        "portraits/**",
+        "images/**",
+        "**/__pycache__/**",
+        "**/*.pyc",
+        "**/*.py",
+        "**/*.log",
+        ".env",
+        "venv/**"
+    ],
+    "liveServer.settings.port": 5503
+}

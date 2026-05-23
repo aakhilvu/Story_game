@@ -1,0 +1,46 @@
+{
+  "Harry Potter": {
+    "file": "Harry_Potter.png",
+    "prompt": "Photorealistic cinematic portrait of Harry Potter. messy black hair, glasses, skinny, black, messy, untidy, round, freckled, small, skinny, Hogwarts robes, glasses. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illuminati"
+  },
+  "Lord Voldemort": {
+    "file": "Lord_Voldemort.png",
+    "prompt": "Photorealistic cinematic portrait of Lord Voldemort. pale, snake-like face, red eyes, bald, snake-like, pale, tall, thin, dark robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behind character, profession"
+  },
+  "Ron Weasley": {
+    "file": "Ron_Weasley.png",
+    "prompt": "Photorealistic cinematic portrait of Ron Weasley. red hair, freckles, tall, red, messy, long, freckled, tall, thin, Hogwarts robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behind character, professional"
+  },
+  "Hermione Granger": {
+    "file": "Hermione_Granger.png",
+    "prompt": "Photorealistic cinematic portrait of Hermione Granger. bushy brown hair, tall, brown, bushy, heart-shaped, bright, tall, slender, Hogwarts robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behind character"
+  },
+  "Albus Dumbledore": {
+    "file": "Albus_Dumbledore.png",
+    "prompt": "Photorealistic cinematic portrait of Albus Dumbledore. long white hair, long white beard, half-moon spectacles, white, long, wise, kind, tall, thin, long robes, half-moon spectacles. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, fla"
+  },
+  "Rubeus Hagrid": {
+    "file": "Rubeus_Hagrid.png",
+    "prompt": "Photorealistic cinematic portrait of Rubeus Hagrid. large, hairy, wild hair, wild, unkempt, wild, kind, large, muscular, gamekeeper's robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behind character, pro"
+  },
+  "Draco Malfoy": {
+    "file": "Draco_Malfoy.png",
+    "prompt": "Photorealistic cinematic portrait of Draco Malfoy. blond hair, pale skin, sneering face, blond, slicked back, sneering, pale, tall, thin, Slytherin robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behind "
+  },
+  "Severus Snape": {
+    "file": "Severus_Snape.png",
+    "prompt": "Photorealistic cinematic portrait of Severus Snape. black hair, greasy, pale skin, black, greasy, pale, gaunt, tall, thin, potions master's robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behind characte"
+  },
+  "Uncle Vernon Dursley": {
+    "file": "Uncle_Vernon_Dursley.png",
+    "prompt": "Photorealistic cinematic portrait of Uncle Vernon Dursley. large, balding, mustache, balding, gray, red, angry, large, overweight, ordinary Muggle clothes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behind"
+  },
+  "Aunt Petunia Dursley": {
+    "file": "Aunt_Petunia_Dursley.png",
+    "prompt": "Photorealistic cinematic portrait of Aunt Petunia Dursley. thin, pinched face, curly hair, curly, brown, thin, pinched, thin, frail, ordinary Muggle clothes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behi"
+  },
+  "Dudley Dursley": {
+    "file": "Dudley_Dursley.png",
+    "prompt": "Photorealistic cinematic portrait of Dudley Dursley. plump, blond hair, smug face, blond, messy, smug, plump, plump, overweight, ordinary Muggle clothes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, plain solid white background, flat white illumination behind c"
+  }
+}

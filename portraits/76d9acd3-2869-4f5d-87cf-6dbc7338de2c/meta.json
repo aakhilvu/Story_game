@@ -1,0 +1,10 @@
+{
+  "Harry Potter": {
+    "file": "Harry_Potter.png",
+    "prompt": "Photorealistic cinematic portrait of Harry Potter. boy of about 11, messy black hair, bright green eyes, round wire-framed glasses, lightning bolt scar on forehead, thin, jet-black hair, short, extremely messy, bright green eyes behind round wire-rimmed glasses, lightning bolt scar on forehead, pale skin, thin and small for his age, round glasses, Hogwarts robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt ligh"
+  },
+  "Ron Weasley": {
+    "file": "Ron_Weasley.png",
+    "prompt": "Photorealistic cinematic portrait of Ron Weasley. red hair, freckles, tall and lanky, red hair, messy, freckles, red hair, tall and lanky, Hogwarts robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, dark moody background with soft bokeh, professional movie sti"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Harry Potter": {
+    "file": "Harry_Potter.png",
+    "prompt": "Photorealistic cinematic portrait of Harry Potter. boy of about 11, messy black hair, bright green eyes, round wire-framed glasses, lightning bolt scar on forehead, thin, jet-black hair, short, extremely messy, bright green eyes behind round wire-rimmed glasses, lightning bolt scar on forehead, pale skin, thin and small for his age, round glasses, Hogwarts robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt ligh"
+  },
+  "Hermione Granger": {
+    "file": "Hermione_Granger.png",
+    "prompt": "Photorealistic cinematic portrait of Hermione Granger. bushy brown hair, bright brown eyes, tall and slender, bushy brown hair, long, bright brown eyes, bushy brown hair, tall and slender, Hogwarts robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, dark moody "
+  },
+  "Rubeus Hagrid": {
+    "file": "Rubeus_Hagrid.png",
+    "prompt": "Photorealistic cinematic portrait of Rubeus Hagrid. tall, muscular, wild hair, beard, gamekeeper's robes, wild hair, long, wild hair, beard, rugged features, tall, muscular, gamekeeper's robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, dark moody background "
+  },
+  "Albus Dumbledore": {
+    "file": "Albus_Dumbledore.png",
+    "prompt": "Photorealistic cinematic portrait of Albus Dumbledore. long white hair, half-moon spectacles, long white beard, tall and slender, long white hair, long white beard, long white beard, half-moon spectacles, wise eyes, tall and slender, long robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, "
+  },
+  "Draco Malfoy": {
+    "file": "Draco_Malfoy.png",
+    "prompt": "Photorealistic cinematic portrait of Draco Malfoy. blond hair, pale skin, sly eyes, slim build, blond hair, slicked back, sly eyes, pale skin, blond hair, slim build, Hogwarts robes. Head and upper chest, slight 3/4 angle, eyes toward camera. Shot on ARRI Alexa Mini, anamorphic 85mm lens, shallow depth of field, dramatic Rembrandt lighting with soft fill, Kodak Vision3 film stock, cinematic color grading, subtle film grain, ultra-detailed skin texture, hyperrealistic facial detail, dark moody background with soft b"
+  }
+}

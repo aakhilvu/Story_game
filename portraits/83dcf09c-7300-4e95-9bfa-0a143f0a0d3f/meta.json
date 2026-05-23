@@ -1,0 +1,10 @@
+{
+  "Harry Potter": {
+    "file": "Harry_Potter.png",
+    "prompt": "detailed anime portrait illustration, painterly cel shading, Studio Ghibli aesthetic, clean line art, vivid colors. SOLO single character: Harry Potter. messy black hair, glasses, skinny, black, messy, unkempt, round, freckled, thin, athletic, Hogwarts robes, glasses. Head and shoulders, facing camera, neutral expression, eyes clearly visible. plain solid white background, centered composition, one person only, single subject, full face visible, masterpiece, best quality, extremely detailed, sharp focus. avoid: extra limbs, extra hands, extra fingers, fused fingers, multiple heads, deformed anatomy, mutated, malformed, disfigured, bad proportions."
+  },
+  "Lord Voldemort": {
+    "file": "Lord_Voldemort.png",
+    "prompt": "detailed anime portrait illustration, painterly cel shading, Studio Ghibli aesthetic, clean line art, vivid colors. SOLO single character: Lord Voldemort. pale, snake-like face, red eyes, snake-like, pale, thin, gaunt, black robes. Head and shoulders, facing camera, neutral expression, eyes clearly visible. plain solid white background, centered composition, one person only, single subject, full face visible, masterpiece, best quality, extremely detailed, sharp focus. avoid: extra limbs, extra hands, extra fingers, fused fingers, multiple heads, deformed anatomy, mutated, malformed, disfigured, bad proportions."
+  }
+}
