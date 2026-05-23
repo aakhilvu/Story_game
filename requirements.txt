@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+PyPDF2
+python-dotenv
+groq
+numpy
+scikit-learn
+requests
+anyio
